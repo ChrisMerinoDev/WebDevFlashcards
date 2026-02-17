@@ -1,6 +1,6 @@
-import Flashcard from "./components/Flashcard";
+import Flashcard from "../../components/Flashcard";
 
-export default function Home() {
+export default function FlashcardsPage() {
 	return (
 		<main className="container-narrow section-pad stack-lg">
 			<div className="flex flex-col justify-center items-center text-center mb-8">
