@@ -99,6 +99,7 @@ p {
 }
 
 pre {
+	text-align: left !important;
 	font-family: var(--font-mono);
 	background:
 		linear-gradient(135deg, rgba(76, 111, 255, 0.12), rgba(255, 155, 82, 0.08)),
@@ -120,6 +121,12 @@ code {
 /* Reusable layout + surface classes */
 .container-narrow {
 	max-width: 1080px;
+	margin: 0 auto;
+	padding: 0 1.5rem;
+}
+
+.container-wide {
+	max-width: 1440px;
 	margin: 0 auto;
 	padding: 0 1.5rem;
 }

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 438 290" width="438" height="290">
+  <defs>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1e2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d2b55;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d2ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-color="#00000044"/>
+    </filter>
+  </defs>
+
+  <!-- Background card (slightly rotated, behind) -->
+  <rect x="18" y="22" width="310" height="278" rx="10" ry="10"
+        fill="#2d2b55" opacity="0.6" transform="rotate(-6, 73, 61)" filter="url(#shadow)"/>
+
+  <!-- Main flashcard -->
+  <rect x="14" y="0" width="410" height="278" rx="10" ry="10"
+        fill="url(#cardGrad)" filter="url(#shadow)"/>
+
+  <!-- Top accent bar -->
+  <rect x="14" y="0" width="410" height="6" rx="5" ry="5" fill="url(#accentGrad)"/>
+
+  <!-- Code brackets on card -->
+  <text x="34" y="68" font-family="'Courier New', monospace" font-size="28" font-weight="bold" fill="#00d2ff">&lt;</text>
+  <text x="58" y="68" font-family="'Courier New', monospace" font-size="28" font-weight="bold" fill="#7c3aed">/</text>
+  <text x="76" y="68" font-family="'Courier New', monospace" font-size="28" font-weight="bold" fill="#00d2ff">&gt;</text>
+
+  <!-- Small dots at bottom of card -->
+  <circle cx="55" cy="88" r="3" fill="#00d2ff" opacity="0.5"/>
+  <circle cx="69" cy="88" r="3" fill="#7c3aed" opacity="0.5"/>
+  <circle cx="83" cy="88" r="3" fill="#00d2ff" opacity="0.5"/>
+
+  <!-- Title text -->
+  <!-- <text x="140" y="60" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="700" fill="#f0f0f8">Web Dev</text>
+  <text x="140" y="88" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="700">
+    <tspan fill="url(#accentGrad)">Flashcards</tspan>
+  </text> -->
+
+  <!-- Subtle underline accent -->
+  <!-- <rect x="140" y="96" width="220" height="3" rx="2" fill="url(#accentGrad)" opacity="0.5"/> -->
+</svg>

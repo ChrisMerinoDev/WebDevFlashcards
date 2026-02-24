@@ -2,11 +2,11 @@ import React from "react";
 
 const page = () => {
 	return (
-		<main>
-			<h1>Patterns Page</h1>
+		<main className="container-wide section-pad stack-lg">
+			<h1 className="text-center">Patterns Page</h1>
 
 			<article>
-				<div>
+				<section className="px-4 my-3 space-y-44 text-center">
 					<h2>Two Pointer Pattern</h2>
 					<p>
 						The Two Pointer Pattern involves using two pointers to iterate
@@ -14,8 +14,9 @@ const page = () => {
 						is particularly useful for problems involving searching, sorting, or
 						partitioning data.
 					</p>
-					<pre>
-						{`function twoPointerExample(arr) {
+					<div className="grid grid-cols-2 space-x-4 mt-20">
+						<pre>
+							{`function twoPointerExample(arr) {
     let left = 0;
     let right = arr.length - 1;
     while (left < right) {
@@ -24,18 +25,28 @@ const page = () => {
         right--;
     }
 }`}
-					</pre>
+						</pre>
 
-					<div>
-						<h2>Sliding Window Pattern</h2>
-						<p>
-							The Sliding Window Pattern is used to create a window that can
-							either be fixed or dynamic in size, which moves over the data
-							structure to solve problems related to subarrays or substrings.
-							This pattern is particularly effective for optimizing time
-							complexity in problems involving sums, averages, or
-							longest/shortest sequences.
-						</p>
+						<ul>
+							<p>Useful for</p>
+							<div className="divider" />
+							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+								<li>✅ Finding pairs in a sorted array</li>
+								<li>✅ Reversing a string</li>
+								<li>✅ Partitioning an array around a pivot</li>
+							</div>
+						</ul>
+					</div>
+
+					<h2>Sliding Window Pattern</h2>
+					<p>
+						The Sliding Window Pattern is used to create a window that can
+						either be fixed or dynamic in size, which moves over the data
+						structure to solve problems related to subarrays or substrings. This
+						pattern is particularly effective for optimizing time complexity in
+						problems involving sums, averages, or longest/shortest sequences.
+					</p>
+					<div className="grid grid-cols-2 space-x-4 mt-20">
 						<pre>
 							{`function slidingWindowExample(arr, k) {
     let windowSum = 0;
@@ -50,17 +61,30 @@ const page = () => {
     return maxSum;
 }`}
 						</pre>
+						<ul>
+							<p>Useful for</p>
+							<div className="divider" />
+							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+								<li>✅ Finding maximum sum of a subarray of size k</li>
+								<li>
+									✅ Finding longest substring without repeating characters
+								</li>
+								<li>✅ Finding minimum size subarray sum</li>
+							</div>
+						</ul>
+					</div>
 
-						<div>
-							<h2>Fast and Slow Pointer Pattern</h2>
-							<p>
-								The Fast and Slow Pointer Pattern involves using two pointers
-								that move at different speeds through a data structure. This
-								technique is commonly used to detect cycles in linked lists or
-								to find the middle element of a list.
-							</p>
-							<pre>
-								{`function hasCycle(head) {
+					<h2>Fast and Slow Pointer Pattern</h2>
+					<p>
+						The Fast and Slow Pointer Pattern involves using two pointers that
+						move at different speeds through a data structure. This technique is
+						commonly used to detect cycles in linked lists or to find the middle
+						element of a list.
+					</p>
+
+					<div className="grid grid-cols-2 space-x-4 mt-20">
+						<pre>
+							{`function hasCycle(head) {
     let slow = head;
     let fast = head;
     while (fast !== null && fast.next !== null) {
@@ -72,20 +96,30 @@ const page = () => {
     }
     return false; // No cycle
 }`}
-							</pre>
+						</pre>
+						<ul>
+							<p>Useful for</p>
+							<div className="divider" />
+							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+								<li>✅ Detecting cycles in linked lists</li>
+								<li>✅ Finding the middle element of a linked list</li>
+								<li>✅ Solving problems related to circular arrays</li>
+							</div>
+						</ul>
+					</div>
 
-							<div>
-								<h2>Divide and Conquer Pattern</h2>
-								<p>
-									The Divide and Conquer Pattern involves breaking a problem
-									down into smaller subproblems, solving each subproblem
-									independently, and then combining the results to solve the
-									original problem. This pattern is often used in sorting
-									algorithms like Merge Sort and Quick Sort, as well as in
-									searching algorithms like Binary Search.
-								</p>
-								<pre>
-									{`function mergeSort(arr) {
+					<h2>Divide and Conquer Pattern</h2>
+					<p>
+						The Divide and Conquer Pattern involves breaking a problem down into
+						smaller subproblems, solving each subproblem independently, and then
+						combining the results to solve the original problem. This pattern is
+						often used in sorting algorithms like Merge Sort and Quick Sort, as
+						well as in searching algorithms like Binary Search.
+					</p>
+
+					<div className="grid grid-cols-2 space-x-4 mt-20">
+						<pre>
+							{`function mergeSort(arr) {
     if (arr.length <= 1) {
         return arr;
     }
@@ -110,19 +144,29 @@ function merge(left, right) {
     }
     return result.concat(left.slice(i)).concat(right.slice(j));
 }`}
-								</pre>
+						</pre>
+						<ul>
+							<p>Useful for</p>
+							<div className="divider" />
+							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+								<li>✅ Sorting algorithms (Merge Sort, Quick Sort)</li>
+								<li>✅ Searching algorithms (Binary Search)</li>
+								<li>✅ Solving problems with optimal substructure</li>
+							</div>
+						</ul>
+					</div>
 
-								<div>
-									<h2>Backtracking Pattern</h2>
-									<p>
-										The Backtracking Pattern is a recursive algorithmic
-										technique used for solving constraint satisfaction problems.
-										It involves building a solution incrementally and abandoning
-										solutions that fail to satisfy the problem&apos;s
-										constraints.
-									</p>
-									<pre>
-										{`function backtrack(solution, options) {
+					<h2>Backtracking Pattern</h2>
+					<p>
+						The Backtracking Pattern is a recursive algorithmic technique used
+						for solving constraint satisfaction problems. It involves building a
+						solution incrementally and abandoning solutions that fail to satisfy
+						the problem&apos;s constraints.
+					</p>
+
+					<div className="grid grid-cols-2 space-x-4 mt-20">
+						<pre>
+							{`function backtrack(solution, options) {
     if (isComplete(solution)) {
         processSolution(solution);
         return;
@@ -135,18 +179,28 @@ function merge(left, right) {
         }
     }
 }`}
-									</pre>
+						</pre>
+						<ul>
+							<p>Useful for</p>
+							<div className="divider" />
+							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+								<li>✅ Solving puzzles (e.g., Sudoku, N-Queens)</li>
+								<li>✅ Generating permutations and combinations</li>
+								<li>✅ Exploring decision trees</li>
+							</div>
+						</ul>
+					</div>
 
-									<div>
-										<h2>Greedy Pattern</h2>
-										<p>
-											The Greedy Pattern involves making a series of choices,
-											each of which looks best at the moment. This approach is
-											used to find an optimal solution for problems like coin
-											change, activity selection, and Huffman coding.
-										</p>
-										<pre>
-											{`function greedyExample(items, capacity) {
+					<h2>Greedy Pattern</h2>
+					<p>
+						The Greedy Pattern involves making a series of choices, each of
+						which looks best at the moment. This approach is used to find an
+						optimal solution for problems like coin change, activity selection,
+						and Huffman coding.
+					</p>
+					<div className="grid grid-cols-2 space-x-4 mt-20">
+						<pre>
+							{`function greedyExample(items, capacity) {
     items.sort((a, b) => b.value / b.weight - a.value / a.weight);
     let totalValue = 0;
     for (let item of items) {
@@ -160,21 +214,29 @@ function merge(left, right) {
     }
     return totalValue;
 }`}
-										</pre>
+						</pre>
+						<ul>
+							<p>Useful for</p>
+							<div className="divider" />
+							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+								<li>✅ Coin change problem</li>
+								<li>✅ Activity selection problem</li>
+								<li>✅ Huffman coding</li>
+							</div>
+						</ul>
+					</div>
 
-										<div>
-											<h2>Dynamic Programming Pattern</h2>
-											<p>
-												The Dynamic Programming Pattern is used to solve
-												problems by breaking them down into simpler subproblems
-												and storing the results of these subproblems to avoid
-												redundant computations. This pattern is particularly
-												useful for optimization problems like the Knapsack
-												problem, Fibonacci sequence, and longest common
-												subsequence.
-											</p>
-											<pre>
-												{`function fibonacci(n) {
+					<h2>Dynamic Programming Pattern</h2>
+					<p>
+						The Dynamic Programming Pattern is used to solve problems by
+						breaking them down into simpler subproblems and storing the results
+						of these subproblems to avoid redundant computations. This pattern
+						is particularly useful for optimization problems like the Knapsack
+						problem, Fibonacci sequence, and longest common subsequence.
+					</p>
+					<div className="grid grid-cols-2 space-x-4 mt-20">
+						<pre>
+							{`function fibonacci(n) {
     const memo = {};
     function fib(n) {
         if (n <= 1) return n;
@@ -184,20 +246,29 @@ function merge(left, right) {
     }
     return fib(n);
 }`}
-											</pre>
+						</pre>
+						<ul>
+							<p>Useful for</p>
+							<div className="divider" />
+							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+								<li>✅ Knapsack problem</li>
+								<li>✅ Fibonacci sequence</li>
+								<li>✅ Longest common subsequence</li>
+							</div>
+						</ul>
+					</div>
 
-											<div>
-												<h2>Topological Sort Pattern</h2>
-												<p>
-													The Topological Sort Pattern is used to order the
-													vertices of a directed acyclic graph (DAG) in a linear
-													sequence such that for every directed edge (u, v),
-													vertex u comes before vertex v in the ordering. This
-													pattern is commonly used in scheduling tasks,
-													resolving dependencies, and organizing data.
-												</p>
-												<pre>
-													{`function topologicalSort(graph) {
+					<h2>Topological Sort Pattern</h2>
+					<p>
+						The Topological Sort Pattern is used to order the vertices of a
+						directed acyclic graph (DAG) in a linear sequence such that for
+						every directed edge (u, v), vertex u comes before vertex v in the
+						ordering. This pattern is commonly used in scheduling tasks,
+						resolving dependencies, and organizing data.
+					</p>
+					<div className="grid grid-cols-2 space-x-4 mt-20">
+						<pre>
+							{`function topologicalSort(graph) {
     const visited = new Set();
     const stack = [];
     
@@ -219,22 +290,31 @@ function merge(left, right) {
     
     return stack.reverse();
 }`}
-												</pre>
+						</pre>
+						<ul>
+							<p>Useful for</p>
+							<div className="divider" />
+							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+								<li>✅ Scheduling tasks with dependencies</li>
+								<li>✅ Resolving dependencies in software packages</li>
+								<li>✅ Organizing data with hierarchical relationships</li>
+							</div>
+						</ul>
+					</div>
 
-												<div>
-													<h2>Union-Find Pattern</h2>
-													<p>
-														The Union-Find Pattern, also known as Disjoint Set
-														Union (DSU), is a data structure that keeps track of
-														a set of elements partitioned into disjoint subsets.
-														It supports two primary operations: finding the
-														representative of a set (find) and merging two sets
-														(union). This pattern is commonly used in network
-														connectivity, Kruskal&apos;s algorithm for minimum
-														spanning trees, and clustering algorithms.
-													</p>
-													<pre>
-														{`class UnionFind {
+					<h2>Union-Find Pattern</h2>
+					<p>
+						The Union-Find Pattern, also known as Disjoint Set Union (DSU), is a
+						data structure that keeps track of a set of elements partitioned
+						into disjoint subsets. It supports two primary operations: finding
+						the representative of a set (find) and merging two sets (union).
+						This pattern is commonly used in network connectivity,
+						Kruskal&apos;s algorithm for minimum spanning trees, and clustering
+						algorithms.
+					</p>
+					<div className="grid grid-cols-2 space-x-4 mt-20">
+						<pre>
+							{`class UnionFind {
     constructor(size) {
         this.parent = Array.from({ length: size }, (_, i) => i);
         this.rank = Array(size).fill(1);
@@ -264,21 +344,29 @@ function merge(left, right) {
         }
     }
 }`}
-													</pre>
+						</pre>
+						<ul>
+							<p>Useful for</p>
+							<div className="divider" />
+							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+								<li>✅ Network connectivity problems</li>
+								<li>✅ Kruskal&apos;s algorithm for minimum spanning trees</li>
+								<li>✅ Clustering algorithms</li>
+							</div>
+						</ul>
+					</div>
 
-													<div>
-														<h2>Graph Traversal Pattern</h2>
-														<p>
-															The Graph Traversal Pattern involves visiting all
-															the nodes in a graph in a systematic way. The two
-															most common methods of graph traversal are
-															Depth-First Search (DFS) and Breadth-First Search
-															(BFS). These techniques are used in various
-															applications such as searching, pathfinding, and
-															network analysis.
-														</p>
-														<pre>
-															{`function dfs(graph, start, visited = new Set()) {
+					<h2>Graph Traversal Pattern</h2>
+					<p>
+						The Graph Traversal Pattern involves visiting all the nodes in a
+						graph in a systematic way. The two most common methods of graph
+						traversal are Depth-First Search (DFS) and Breadth-First Search
+						(BFS). These techniques are used in various applications such as
+						searching, pathfinding, and network analysis.
+					</p>
+					<div className="grid grid-cols-2 space-x-4 mt-20">
+						<pre>
+							{`function dfs(graph, start, visited = new Set()) {
     visited.add(start);
     for (let neighbor of graph[start]) {
         if (!visited.has(neighbor)) {
@@ -304,101 +392,118 @@ function bfs(graph, start) {
     }
     return visited;
 }`}
-														</pre>
+						</pre>
+						<ul>
+							<p>Useful for</p>
+							<div className="divider" />
+							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+								<li>✅ Searching for a node in a graph</li>
+								<li>✅ Finding the shortest path between nodes</li>
+								<li>✅ Analyzing network connectivity</li>
+							</div>
+						</ul>
+					</div>
 
-														<div>
-															<h2>Memoization Pattern</h2>
-															<p>
-																The Memoization Pattern is an optimization
-																technique used to speed up recursive algorithms
-																by storing the results of expensive function
-																calls and reusing them when the same inputs
-																occur again. This pattern is particularly useful
-																in problems with overlapping subproblems, such
-																as calculating Fibonacci numbers or solving
-																combinatorial problems.
-															</p>
-															<pre>
-																{`function memoizedFibonacci(n, memo = {}) {
-    if (n <= 1) return n;
-    if (memo[n]) return memo[n];
-    memo[n] = memoizedFibonacci(n - 1, memo) + memoizedFibonacci(n - 2, memo);
-    return memo[n];
+					<h2>Memoization Pattern</h2>
+					<p>
+						The Memoization Pattern is an optimization technique used to speed
+						up recursive algorithms by storing the results of expensive function
+						calls and reusing them when the same inputs occur again. This
+						pattern is particularly useful in problems with overlapping
+						subproblems, such as calculating Fibonacci numbers or solving
+						combinatorial problems.
+					</p>
+					<div className="grid grid-cols-2 space-x-4 mt-20">
+						<pre>
+							{`function memoizedFibonacci(n, memo = {}) {
+ if (n <= 1) return n;
+ if (memo[n]) return memo[n];
+ memo[n] = memoizedFibonacci(n - 1, memo) + memoizedFibonacci(n - 2, memo);
+ return memo[n];
 }`}
-															</pre>
+						</pre>
+						<ul>
+							<p>Useful for</p>
+							<div className="divider" />
+							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+								<li>✅ Calculating Fibonacci numbers</li>
+								<li>✅ Solving combinatorial problems</li>
+								<li>
+									✅ Optimizing recursive algorithms with overlapping
+									subproblems
+								</li>
+							</div>
+						</ul>
+					</div>
 
-															<div>
-																<h2>Additional Resources</h2>
-																<p>
-																	For more in-depth explanations and examples of
-																	these patterns, consider exploring algorithm
-																	textbooks, online coding platforms, and
-																	educational websites dedicated to data
-																	structures and algorithms.
-																</p>
-															</div>
-
-															<div>
-																<h2>Practice Problems</h2>
-																<p>
-																	To solidify your understanding of these
-																	patterns, try solving related problems on
-																	platforms like LeetCode, HackerRank, or
-																	CodeSignal.
-																</p>
-															</div>
-															<div>
-																<h2>Palindrome Pattern</h2>
-																<p>
-																	The Palindrome Pattern involves identifying
-																	and working with palindromic strings or
-																	numbers. A palindrome is a sequence that reads
-																	the same backward as forward. Common problems
-																	include checking if a string is a palindrome,
-																	finding the longest palindromic substring, or
-																	generating palindromes.
-																</p>
-																<pre>
-																	{`function isPalindrome(s) {
+					<h2>Palindrome Pattern</h2>
+					<p>
+						The Palindrome Pattern involves identifying and working with
+						palindromic strings or numbers. A palindrome is a sequence that
+						reads the same backward as forward. Common problems include checking
+						if a string is a palindrome, finding the longest palindromic
+						substring, or generating palindromes.
+					</p>
+					<div className="grid grid-cols-2 space-x-4 mt-20">
+						<pre>
+							{`function isPalindrome(s) {
     const cleaned = s.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
     return cleaned === cleaned.split('').reverse().join('');
 }`}
-																</pre>
+						</pre>
+						<ul>
+							<p>Useful for</p>
+							<div className="divider" />
+							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+								<li>✅ Checking if a string is a palindrome</li>
+								<li>✅ Finding the longest palindromic substring</li>
+								<li>✅ Generating palindromic strings</li>
+							</div>
+						</ul>
+					</div>
 
-																<div>
-																	<h2>Recursion Pattern</h2>
-																	<p>
-																		The Recursion Pattern involves solving a
-																		problem by having a function call itself.
-																		This technique is particularly useful for
-																		problems that can be broken down into
-																		smaller, similar subproblems, such as tree
-																		traversals, combinatorial problems, and
-																		divide-and-conquer algorithms.
-																	</p>
-																	<pre>
-																		{`function factorial(n) {
+					<h2>Recursion Pattern</h2>
+					<p>
+						The Recursion Pattern involves solving a problem by having a
+						function call itself. This technique is particularly useful for
+						problems that can be broken down into smaller, similar subproblems,
+						such as tree traversals, combinatorial problems, and
+						divide-and-conquer algorithms.
+					</p>
+					<div className="grid grid-cols-2 space-x-4 mt-20">
+						<pre>
+							{`function factorial(n) {
     if (n === 0) {
         return 1;
     }
     return n * factorial(n - 1);
 }`}
-																	</pre>
+						</pre>
+						<ul>
+							<p>Useful for</p>
+							<div className="divider" />
+							<div className="space-y-2 mt-6 ml-48 items-start flex flex-col">
+								<li>✅ Tree traversals (preorder, inorder, postorder)</li>
+								<li>
+									✅ Solving combinatorial problems (e.g., permutations,
+									combinations)
+								</li>
+								<li>✅ Implementing divide-and-conquer algorithms</li>
+							</div>
+						</ul>
+					</div>
 
-																	<div>
-																		<h2>Bit Manipulation Pattern</h2>
-																		<p>
-																			The Bit Manipulation Pattern involves
-																			using bitwise operations to solve problems
-																			related to binary representations of
-																			numbers. This technique is often used for
-																			optimizing space and time complexity in
-																			problems such as finding unique elements,
-																			counting bits, and performing arithmetic
-																			operations.
-																		</p>
-																		<pre>
-																			{`function countSetBits(n) {
+					<h2>Bit Manipulation Pattern</h2>
+					<p>
+						The Bit Manipulation Pattern involves using bitwise operations to
+						solve problems related to binary representations of numbers. This
+						technique is often used for optimizing space and time complexity in
+						problems such as finding unique elements, counting bits, and
+						performing arithmetic operations.
+					</p>
+					<div className="grid grid-cols-2 space-x-4 mt-20">
+						<pre>
+							{`function countSetBits(n) {
     let count = 0;
     while (n) {
         count += n & 1;
@@ -406,20 +511,30 @@ function bfs(graph, start) {
     }
     return count;
 }`}
-																		</pre>
-																		<div>
-																			<h2>Matrix Traversal Pattern</h2>
-																			<p>
-																				The Matrix Traversal Pattern involves
-																				navigating through a 2D array or matrix
-																				to solve problems such as searching for
-																				elements, finding paths, or performing
-																				transformations. Common traversal
-																				methods include row-wise, column-wise,
-																				and diagonal traversals.
-																			</p>
-																			<pre>
-																				{`function traverseMatrix(matrix) {
+						</pre>
+						<ul>
+							<p>Useful for</p>
+							<div className="divider" />
+							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+								<li>✅ Finding unique elements in an array</li>
+								<li>✅ Counting the number of set bits in a number</li>
+								<li>
+									✅ Performing arithmetic operations using bitwise operators
+								</li>
+							</div>
+						</ul>
+					</div>
+
+					<h2>Matrix Traversal Pattern</h2>
+					<p>
+						The Matrix Traversal Pattern involves navigating through a 2D array
+						or matrix to solve problems such as searching for elements, finding
+						paths, or performing transformations. Common traversal methods
+						include row-wise, column-wise, and diagonal traversals.
+					</p>
+					<div className="grid grid-cols-2 space-x-4 mt-20">
+						<pre>
+							{`function traverseMatrix(matrix) {
     const result = [];
     const rows = matrix.length;
     const cols = matrix[0].length;
@@ -431,42 +546,58 @@ function bfs(graph, start) {
     }
     return result;
 }`}
-																			</pre>
-																			<div>
-																				<h2>Palindrome with Numbers Pattern</h2>
-																				<p>
-																					The Palindrome with Numbers Pattern
-																					focuses on identifying and
-																					manipulating palindromic numbers. A
-																					palindromic number remains the same
-																					when its digits are reversed. Common
-																					problems include checking if a number
-																					is a palindrome, finding the largest
-																					palindromic number within a range, or
-																					generating palindromic numbers.
-																				</p>
-																				<pre>
-																					{`function isNumberPalindrome(num) {
+						</pre>
+						<ul>
+							<p>Useful for</p>
+							<div className="divider" />
+							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+								<li>✅ Searching for elements in a matrix</li>
+								<li>✅ Finding paths in a grid</li>
+								<li>✅ Performing transformations on matrices</li>
+							</div>
+						</ul>
+					</div>
+
+					<h2>Palindrome with Numbers Pattern</h2>
+					<p>
+						The Palindrome with Numbers Pattern focuses on identifying and
+						manipulating palindromic numbers. A palindromic number remains the
+						same when its digits are reversed. Common problems include checking
+						if a number is a palindrome, finding the largest palindromic number
+						within a range, or generating palindromic numbers.
+					</p>
+					<div className="grid grid-cols-2 space-x-4 mt-20">
+						<pre>
+							{`function isNumberPalindrome(num) {
     const str = num.toString();
     const reversedStr = str.split('').reverse().join('');
     return str === reversedStr;
 }`}
-																				</pre>
+						</pre>
+						<ul>
+							<p>Useful for</p>
+							<div className="divider" />
+							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+								<li>✅ Checking if a number is a palindrome</li>
+								<li>
+									✅ Finding the largest palindromic number within a range
+								</li>
+								<li>✅ Generating palindromic numbers</li>
+							</div>
+						</ul>
+					</div>
 
-																				<div>
-																					<h2>
-																						Palindrome with Numbers Pattern
-																						without converting it to String
-																					</h2>
-																					<p>
-																						To check if a number is a palindrome
-																						without converting it to a string,
-																						we can reverse the number
-																						mathematically and compare it with
-																						the original number.
-																					</p>
-																					<pre>
-																						{`function isNumberPalindrome(num) {
+					<h2>
+						Palindrome with Numbers Pattern without converting it to String
+					</h2>
+					<p>
+						To check if a number is a palindrome without converting it to a
+						string, we can reverse the number mathematically and compare it with
+						the original number.
+					</p>
+					<div className="grid grid-cols-2 space-x-4 mt-20">
+						<pre>
+							{`function isNumberPalindrome(num) {
     let original = num;
     let reversed = 0;
     while (num > 0) {
@@ -475,31 +606,39 @@ function bfs(graph, start) {
     }
     return original === reversed;
 }`}
-																					</pre>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div>
-									<h2>Additional Patterns Coming Soon!</h2>
-									<p>
-										Stay tuned for more algorithmic patterns and their
-										explanations.
-									</p>
-								</div>
+						</pre>
+						<ul>
+							<p>Useful for</p>
+							<div className="divider" />
+							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+								<li>✅ Checking if a number is a palindrome</li>
+								<li>
+									✅ Finding the largest palindromic number within a range
+								</li>
+								<li>✅ Generating palindromic numbers</li>
 							</div>
-						</div>
+						</ul>
 					</div>
-				</div>
+
+					<h2>Additional Patterns Coming Soon!</h2>
+					<p>
+						Stay tuned for more algorithmic patterns and their explanations.
+					</p>
+
+					<h2>Additional Resources</h2>
+					<p>
+						For more in-depth explanations and examples of these patterns,
+						consider exploring algorithm textbooks, online coding platforms, and
+						educational websites dedicated to data structures and algorithms.
+					</p>
+
+					<h2>Practice Problems</h2>
+					<p>
+						To solidify your understanding of these patterns, try solving
+						related problems on platforms like LeetCode, HackerRank, or
+						CodeSignal.
+					</p>
+				</section>
 			</article>
 		</main>
 	);

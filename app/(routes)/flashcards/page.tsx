@@ -209,13 +209,6 @@ export default function FlashcardsPage() {
 					interviewReadyAnswer="useEffect lets us run side effects after React updates the DOM. It keeps the render function pure while handling things like data fetching, subscriptions, or manual DOM interactions."
 					tags={["React", "useEffect", "side effects", "component lifecycle"]}
 				/>
-			</div>
-
-			<section className="div-center text-center my-16">
-				<h1>How React handles UI interaction</h1>
-			</section>
-
-			<div className="flashcard-grid">
 				<Flashcard
 					id="15"
 					question="What is conditional rendering in React?"
@@ -230,7 +223,13 @@ export default function FlashcardsPage() {
 					interviewReadyAnswer="Conditional rendering allows us to render different components or elements based on the application`s current state or props. For example, showing a loading spinner while data is being fetched, and then showing the content once the data arrives."
 					tags={["React", "conditional rendering", "UI interaction"]}
 				/>
+			</div>
 
+			<section className="div-center text-center my-16">
+				<h1>How React handles UI interaction</h1>
+			</section>
+
+			<div className="flashcard-grid">
 				<Flashcard
 					id="16"
 					question="What is a “controlled input” in React?"
@@ -596,29 +595,25 @@ export default function FlashcardsPage() {
 					interviewReadyAnswer="JavaScript is asynchronous when making API calls because it runs on a single-threaded event loop. Making API calls is an I/O operation that can take a long time to complete. If JavaScript were synchronous, it would block the entire thread and make the UI unresponsive while waiting for the API response."
 					tags={["JavaScript", "asynchronous", "API calls", "event loop"]}
 				/>
-
 				<Flashcard
 					id="33"
-					title=""
-					question=""
-					answer=""
-					why=""
-					keyFacts={[]}
-					interviewReadyAnswer=""
-					example=""
-					tags={[]}
-				/>
-
-				<Flashcard
-					id="34"
-					title=""
-					question=""
-					answer=""
-					why=""
-					keyFacts={[]}
-					interviewReadyAnswer=""
-					example=""
-					tags={[]}
+					title="React Performance"
+					question="What is React.memo and when should you use it?"
+					answer="React.memo is a higher-order component that prevents a functional component from re-rendering if its props have not changed. It performs a shallow comparison of props and reuses the previous render result when they are the same."
+					why="By default, a child component re-renders whenever its parent re-renders. React.memo helps optimize performance by skipping unnecessary renders."
+					keyFacts={[
+						"Prevents unnecessary re-renders",
+						"Performs shallow comparison of props",
+						"Useful for pure functional components",
+						"Improves performance in large component trees",
+						"Not needed unless re-rendering causes performance issues",
+					]}
+					interviewReadyAnswer="React.memo is used to optimize performance by preventing a functional component from re-rendering when its props haven’t changed. It does a shallow comparison of props and reuses the previous render result."
+					example={`const Button = React.memo(({ label }) => {
+  console.log("Rendered");
+  return <button>{label}</button>;
+});`}
+					tags={["React", "performance", "optimization"]}
 				/>
 			</div>
 		</main>
