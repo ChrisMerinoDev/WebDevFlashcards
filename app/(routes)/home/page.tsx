@@ -53,11 +53,11 @@ export default function HomePage() {
 				<button
 					type="button"
 					onClick={toggleMute}
-					className="my-3 rounded-md border px-3 py-2 text-sm hover:cursor-pointer hover:bg-gray-400"
+					className="my-3 rounded-md border px-3 py-2 text-sm hover:cursor-pointer hover:font-bold hover:bg-gray-400  transition-colors"
 				>
 					{isMuted ? "Unmute video" : "Mute video"}
 				</button>
-				<h3>Start creating and reviewing your flashcards!</h3>
+				<h3>Start reviewing your flashcards!</h3>
 				<h4>
 					Use the navigation bar above to explore flashcards and patterns.
 				</h4>

@@ -33,7 +33,7 @@ const CheatsheetsPage = () => {
 						alt="JavaScript Cheatsheet"
 						width={800}
 						height={400}
-						className="mx-auto rounded-md shadow-md"
+						className="mx-auto rounded-md shadow-md w-full object-cover"
 					/>
 				</Link>
 				<p className="text-center">
