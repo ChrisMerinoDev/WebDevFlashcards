@@ -24,10 +24,13 @@ const CheatsheetsPage = () => {
 				<h2 className="text-center">Explore Our Coding Cheatsheets</h2>
 			</div>
 
-			<section className="stack-lg p-6 mt-20">
+			<section className="stack-lg mt-10 p-4 sm:mt-20 sm:p-6">
 				<h3 className="text-center">JavaScript Cheatsheet</h3>
 
-				<Link href="/cheatsheets/javascript " className="w-fit mx-auto">
+				<Link
+					href="/cheatsheets/javascript"
+					className="mx-auto block w-full max-w-4xl"
+				>
 					<Image
 						src="/javascript.jpg"
 						alt="JavaScript Cheatsheet"

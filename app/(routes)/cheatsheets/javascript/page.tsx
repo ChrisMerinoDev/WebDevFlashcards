@@ -9,7 +9,7 @@ const page = () => {
 					practices for quick reference.
 				</h2>
 
-				<div className="stack-sm space-y-28 p-12 bg-gray-950 rounded-md shadow-md">
+				<div className="stack-sm space-y-16 rounded-md bg-gray-950 p-5 shadow-md sm:space-y-28 sm:p-12">
 					<h3>What is fetch?</h3>
 					<p>
 						fetch is a browser API for making HTTP requests. It returns a

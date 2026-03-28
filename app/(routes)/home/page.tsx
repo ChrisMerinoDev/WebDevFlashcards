@@ -48,7 +48,7 @@ export default function HomePage() {
 					title="Flashcards demo video"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 					allowFullScreen
-					className="max-w-2xl max-h-96 shadow-md"
+					className="aspect-video w-full max-w-3xl rounded-[var(--radius-md)] shadow-md"
 				></iframe>
 				<button
 					type="button"
@@ -58,7 +58,7 @@ export default function HomePage() {
 					{isMuted ? "Unmute video" : "Mute video"}
 				</button>
 				<h3>Start reviewing your flashcards!</h3>
-				<h4>
+				<h4 className="text-center">
 					Use the navigation bar above to explore flashcards and patterns.
 				</h4>
 			</div>

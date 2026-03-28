@@ -6,7 +6,7 @@ const page = () => {
 			<h1 className="text-center">Patterns Page</h1>
 
 			<article>
-				<section className="px-4 my-3 space-y-44 text-center">
+				<section className="patterns-section">
 					<h2>Two Pointer Pattern</h2>
 					<p>
 						The Two Pointer Pattern involves using two pointers to iterate
@@ -14,7 +14,7 @@ const page = () => {
 						is particularly useful for problems involving searching, sorting, or
 						partitioning data.
 					</p>
-					<div className="grid grid-cols-2 space-x-4 mt-20">
+					<div className="patterns-split">
 						<pre>
 							{`function twoPointerExample(arr) {
     let left = 0;
@@ -30,7 +30,7 @@ const page = () => {
 						<ul>
 							<p>Useful for</p>
 							<div className="divider" />
-							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+							<div className="patterns-useful-list">
 								<li>✅ Finding pairs in a sorted array</li>
 								<li>✅ Reversing a string</li>
 								<li>✅ Partitioning an array around a pivot</li>
@@ -46,7 +46,7 @@ const page = () => {
 						pattern is particularly effective for optimizing time complexity in
 						problems involving sums, averages, or longest/shortest sequences.
 					</p>
-					<div className="grid grid-cols-2 space-x-4 mt-20">
+					<div className="patterns-split">
 						<pre>
 							{`function slidingWindowExample(arr, k) {
     let windowSum = 0;
@@ -64,7 +64,7 @@ const page = () => {
 						<ul>
 							<p>Useful for</p>
 							<div className="divider" />
-							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+							<div className="patterns-useful-list">
 								<li>✅ Finding maximum sum of a subarray of size k</li>
 								<li>
 									✅ Finding longest substring without repeating characters
@@ -82,7 +82,7 @@ const page = () => {
 						element of a list.
 					</p>
 
-					<div className="grid grid-cols-2 space-x-4 mt-20">
+					<div className="patterns-split">
 						<pre>
 							{`function hasCycle(head) {
     let slow = head;
@@ -100,7 +100,7 @@ const page = () => {
 						<ul>
 							<p>Useful for</p>
 							<div className="divider" />
-							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+							<div className="patterns-useful-list">
 								<li>✅ Detecting cycles in linked lists</li>
 								<li>✅ Finding the middle element of a linked list</li>
 								<li>✅ Solving problems related to circular arrays</li>
@@ -117,7 +117,7 @@ const page = () => {
 						well as in searching algorithms like Binary Search.
 					</p>
 
-					<div className="grid grid-cols-2 space-x-4 mt-20">
+					<div className="patterns-split">
 						<pre>
 							{`function mergeSort(arr) {
     if (arr.length <= 1) {
@@ -148,7 +148,7 @@ function merge(left, right) {
 						<ul>
 							<p>Useful for</p>
 							<div className="divider" />
-							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+							<div className="patterns-useful-list">
 								<li>✅ Sorting algorithms (Merge Sort, Quick Sort)</li>
 								<li>✅ Searching algorithms (Binary Search)</li>
 								<li>✅ Solving problems with optimal substructure</li>
@@ -164,7 +164,7 @@ function merge(left, right) {
 						the problem&apos;s constraints.
 					</p>
 
-					<div className="grid grid-cols-2 space-x-4 mt-20">
+					<div className="patterns-split">
 						<pre>
 							{`function backtrack(solution, options) {
     if (isComplete(solution)) {
@@ -183,7 +183,7 @@ function merge(left, right) {
 						<ul>
 							<p>Useful for</p>
 							<div className="divider" />
-							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+							<div className="patterns-useful-list">
 								<li>✅ Solving puzzles (e.g., Sudoku, N-Queens)</li>
 								<li>✅ Generating permutations and combinations</li>
 								<li>✅ Exploring decision trees</li>
@@ -198,7 +198,7 @@ function merge(left, right) {
 						optimal solution for problems like coin change, activity selection,
 						and Huffman coding.
 					</p>
-					<div className="grid grid-cols-2 space-x-4 mt-20">
+					<div className="patterns-split">
 						<pre>
 							{`function greedyExample(items, capacity) {
     items.sort((a, b) => b.value / b.weight - a.value / a.weight);
@@ -218,7 +218,7 @@ function merge(left, right) {
 						<ul>
 							<p>Useful for</p>
 							<div className="divider" />
-							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+							<div className="patterns-useful-list">
 								<li>✅ Coin change problem</li>
 								<li>✅ Activity selection problem</li>
 								<li>✅ Huffman coding</li>
@@ -234,7 +234,7 @@ function merge(left, right) {
 						is particularly useful for optimization problems like the Knapsack
 						problem, Fibonacci sequence, and longest common subsequence.
 					</p>
-					<div className="grid grid-cols-2 space-x-4 mt-20">
+					<div className="patterns-split">
 						<pre>
 							{`function fibonacci(n) {
     const memo = {};
@@ -250,7 +250,7 @@ function merge(left, right) {
 						<ul>
 							<p>Useful for</p>
 							<div className="divider" />
-							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+							<div className="patterns-useful-list">
 								<li>✅ Knapsack problem</li>
 								<li>✅ Fibonacci sequence</li>
 								<li>✅ Longest common subsequence</li>
@@ -266,7 +266,7 @@ function merge(left, right) {
 						ordering. This pattern is commonly used in scheduling tasks,
 						resolving dependencies, and organizing data.
 					</p>
-					<div className="grid grid-cols-2 space-x-4 mt-20">
+					<div className="patterns-split">
 						<pre>
 							{`function topologicalSort(graph) {
     const visited = new Set();
@@ -294,7 +294,7 @@ function merge(left, right) {
 						<ul>
 							<p>Useful for</p>
 							<div className="divider" />
-							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+							<div className="patterns-useful-list">
 								<li>✅ Scheduling tasks with dependencies</li>
 								<li>✅ Resolving dependencies in software packages</li>
 								<li>✅ Organizing data with hierarchical relationships</li>
@@ -312,7 +312,7 @@ function merge(left, right) {
 						Kruskal&apos;s algorithm for minimum spanning trees, and clustering
 						algorithms.
 					</p>
-					<div className="grid grid-cols-2 space-x-4 mt-20">
+					<div className="patterns-split">
 						<pre>
 							{`class UnionFind {
     constructor(size) {
@@ -348,7 +348,7 @@ function merge(left, right) {
 						<ul>
 							<p>Useful for</p>
 							<div className="divider" />
-							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+							<div className="patterns-useful-list">
 								<li>✅ Network connectivity problems</li>
 								<li>✅ Kruskal&apos;s algorithm for minimum spanning trees</li>
 								<li>✅ Clustering algorithms</li>
@@ -364,7 +364,7 @@ function merge(left, right) {
 						(BFS). These techniques are used in various applications such as
 						searching, pathfinding, and network analysis.
 					</p>
-					<div className="grid grid-cols-2 space-x-4 mt-20">
+					<div className="patterns-split">
 						<pre>
 							{`function dfs(graph, start, visited = new Set()) {
     visited.add(start);
@@ -396,7 +396,7 @@ function bfs(graph, start) {
 						<ul>
 							<p>Useful for</p>
 							<div className="divider" />
-							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+							<div className="patterns-useful-list">
 								<li>✅ Searching for a node in a graph</li>
 								<li>✅ Finding the shortest path between nodes</li>
 								<li>✅ Analyzing network connectivity</li>
@@ -413,7 +413,7 @@ function bfs(graph, start) {
 						subproblems, such as calculating Fibonacci numbers or solving
 						combinatorial problems.
 					</p>
-					<div className="grid grid-cols-2 space-x-4 mt-20">
+					<div className="patterns-split">
 						<pre>
 							{`function memoizedFibonacci(n, memo = {}) {
  if (n <= 1) return n;
@@ -425,7 +425,7 @@ function bfs(graph, start) {
 						<ul>
 							<p>Useful for</p>
 							<div className="divider" />
-							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+							<div className="patterns-useful-list">
 								<li>✅ Calculating Fibonacci numbers</li>
 								<li>✅ Solving combinatorial problems</li>
 								<li>
@@ -444,7 +444,7 @@ function bfs(graph, start) {
 						if a string is a palindrome, finding the longest palindromic
 						substring, or generating palindromes.
 					</p>
-					<div className="grid grid-cols-2 space-x-4 mt-20">
+					<div className="patterns-split">
 						<pre>
 							{`function isPalindrome(s) {
     const cleaned = s.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
@@ -454,7 +454,7 @@ function bfs(graph, start) {
 						<ul>
 							<p>Useful for</p>
 							<div className="divider" />
-							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+							<div className="patterns-useful-list">
 								<li>✅ Checking if a string is a palindrome</li>
 								<li>✅ Finding the longest palindromic substring</li>
 								<li>✅ Generating palindromic strings</li>
@@ -470,7 +470,7 @@ function bfs(graph, start) {
 						such as tree traversals, combinatorial problems, and
 						divide-and-conquer algorithms.
 					</p>
-					<div className="grid grid-cols-2 space-x-4 mt-20">
+					<div className="patterns-split">
 						<pre>
 							{`function factorial(n) {
     if (n === 0) {
@@ -482,7 +482,7 @@ function bfs(graph, start) {
 						<ul>
 							<p>Useful for</p>
 							<div className="divider" />
-							<div className="space-y-2 mt-6 ml-48 items-start flex flex-col">
+							<div className="patterns-useful-list">
 								<li>✅ Tree traversals (preorder, inorder, postorder)</li>
 								<li>
 									✅ Solving combinatorial problems (e.g., permutations,
@@ -501,7 +501,7 @@ function bfs(graph, start) {
 						problems such as finding unique elements, counting bits, and
 						performing arithmetic operations.
 					</p>
-					<div className="grid grid-cols-2 space-x-4 mt-20">
+					<div className="patterns-split">
 						<pre>
 							{`function countSetBits(n) {
     let count = 0;
@@ -515,7 +515,7 @@ function bfs(graph, start) {
 						<ul>
 							<p>Useful for</p>
 							<div className="divider" />
-							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+							<div className="patterns-useful-list">
 								<li>✅ Finding unique elements in an array</li>
 								<li>✅ Counting the number of set bits in a number</li>
 								<li>
@@ -532,7 +532,7 @@ function bfs(graph, start) {
 						paths, or performing transformations. Common traversal methods
 						include row-wise, column-wise, and diagonal traversals.
 					</p>
-					<div className="grid grid-cols-2 space-x-4 mt-20">
+					<div className="patterns-split">
 						<pre>
 							{`function traverseMatrix(matrix) {
     const result = [];
@@ -550,7 +550,7 @@ function bfs(graph, start) {
 						<ul>
 							<p>Useful for</p>
 							<div className="divider" />
-							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+							<div className="patterns-useful-list">
 								<li>✅ Searching for elements in a matrix</li>
 								<li>✅ Finding paths in a grid</li>
 								<li>✅ Performing transformations on matrices</li>
@@ -566,7 +566,7 @@ function bfs(graph, start) {
 						if a number is a palindrome, finding the largest palindromic number
 						within a range, or generating palindromic numbers.
 					</p>
-					<div className="grid grid-cols-2 space-x-4 mt-20">
+					<div className="patterns-split">
 						<pre>
 							{`function isNumberPalindrome(num) {
     const str = num.toString();
@@ -577,7 +577,7 @@ function bfs(graph, start) {
 						<ul>
 							<p>Useful for</p>
 							<div className="divider" />
-							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+							<div className="patterns-useful-list">
 								<li>✅ Checking if a number is a palindrome</li>
 								<li>
 									✅ Finding the largest palindromic number within a range
@@ -595,7 +595,7 @@ function bfs(graph, start) {
 						string, we can reverse the number mathematically and compare it with
 						the original number.
 					</p>
-					<div className="grid grid-cols-2 space-x-4 mt-20">
+					<div className="patterns-split">
 						<pre>
 							{`function isNumberPalindrome(num) {
     let original = num;
@@ -610,7 +610,7 @@ function bfs(graph, start) {
 						<ul>
 							<p>Useful for</p>
 							<div className="divider" />
-							<div className="space-y-2 mt-6 ml-56 items-start flex flex-col">
+							<div className="patterns-useful-list">
 								<li>✅ Checking if a number is a palindrome</li>
 								<li>
 									✅ Finding the largest palindromic number within a range

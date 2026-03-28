@@ -61,10 +61,21 @@ body {
 	font-family: var(--font-sans);
 	letter-spacing: -0.01em;
 	line-height: 1.6;
+	overflow-x: hidden;
 }
 
 * {
 	box-sizing: border-box;
+}
+
+html {
+	overflow-x: hidden;
+}
+
+img,
+iframe,
+video {
+	max-width: 100%;
 }
 
 h1,
@@ -507,4 +518,105 @@ code {
 	border: 1px solid rgba(76, 111, 255, 0.4);
 	text-decoration: underline;
 	font-weight: bold;
+}
+
+.patterns-section {
+	padding-inline: clamp(0.25rem, 2vw, 1rem);
+	margin: 0.75rem 0;
+	display: grid;
+	gap: clamp(3rem, 8vw, 8rem);
+	text-align: center;
+}
+
+.patterns-split {
+	display: grid;
+	grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.9fr);
+	gap: clamp(1rem, 3vw, 1.5rem);
+	align-items: start;
+	margin-top: clamp(1.5rem, 5vw, 5rem);
+}
+
+.patterns-split > ul {
+	list-style: none;
+	margin: 0;
+	padding: clamp(1.1rem, 2vw, 1.4rem);
+	border-radius: var(--radius-lg);
+	background: linear-gradient(
+		180deg,
+		rgba(71, 63, 104, 0.116),
+		rgb(45, 63, 103)
+	);
+	border: 1px solid rgba(76, 111, 255, 0.12);
+	box-shadow: var(--shadow-1);
+}
+
+.patterns-split > ul > p {
+	margin: 0;
+	font-size: 0.82rem;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	font-weight: 700;
+	color: var(--accent-3);
+}
+
+.patterns-useful-list {
+	margin-top: 1rem;
+	display: grid;
+	gap: 0.7rem;
+	justify-items: start;
+	text-align: left;
+	color: var(--foreground);
+}
+
+.patterns-useful-list li {
+	list-style: none;
+}
+
+@media (max-width: 900px) {
+	.navigation-bar {
+		height: auto;
+		padding: 1rem;
+	}
+
+	.navigation-links {
+		width: 100%;
+		flex-wrap: wrap;
+		justify-content: center;
+		row-gap: 0.6rem;
+		font-size: 1rem;
+	}
+
+	.flashcard {
+		aspect-ratio: auto;
+		min-height: 220px;
+	}
+
+	.patterns-split {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 640px) {
+	.container-narrow,
+	.container-wide {
+		padding: 0 1rem;
+	}
+
+	pre {
+		padding: 1rem;
+		font-size: 0.88rem;
+	}
+
+	.flashcard-modal {
+		padding: 0.75rem;
+	}
+
+	.flashcard-modal__panel {
+		max-height: 90vh;
+		padding: 1.2rem;
+	}
+
+	.patterns-section {
+		gap: 2.5rem;
+	}
 }
